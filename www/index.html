@@ -31,19 +31,19 @@
       })
       $(function(){
         $("btnA").click(function(e){
-          btanAClick(e);
+          btnAClick(e);
         })
       })
+    }
       function fetch(){
-        var TestClass = ncmb.DateStore("FetchTest");
+        var TestClass = ncmb.DataStore("FetchTest");
         TestClass.fetch()
         .then(function(results){
-          var data = result.get("text");
-          var update = result.get("updataDate");
+          var data = results.get("text");
+          var update = results.get("updateDate");
           $("#message").html(data + ":" + update);
         })
       }
-    }
     </script>
 </head>
 <body>
